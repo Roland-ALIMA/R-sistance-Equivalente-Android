@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/nbr_anneaux_text"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/nombre_anneaux"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:id="@+id/nbr_anneaux_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_toEndOf="@id/nbr_anneaux_text"
+        />
+
+    <Spinner
+        android:id="@+id/color1_spinner"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/nbr_anneaux_text"
+        />
+
+    <Spinner
+        android:id="@+id/color2_spinner"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/nbr_anneaux_text"
+        android:layout_toEndOf="@id/color1_spinner"
+        />
+
+    <Spinner
+        android:id="@+id/color3_spinner"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/nbr_anneaux_text"
+        android:layout_toEndOf="@id/color2_spinner"
+        />
+
+    <Spinner
+        android:id="@+id/color4_spinner"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/color1_spinner"
+        />
+
+    <Spinner
+        android:id="@+id/color5_spinner"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/color2_spinner"
+        android:layout_toEndOf="@id/color4_spinner"
+        />
+
+    <Spinner
+        android:id="@+id/color6_spinner"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/color2_spinner"
+        android:layout_toEndOf="@id/color5_spinner"
+        />
+
+</RelativeLayout>
