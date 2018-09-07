@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private String[] anneau1 = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
     private String[] anneau2 = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
     private String[] multiplicator = {"1", "10", "100", "1000", "10000", "100000", "1000000", "10000000", "100000000", "1000000000", "0.1", "0.01"};
-    private String[] tolerance = {"1%", "2%", "0.5%", "0.25%", "0.1%", "0.05%", "5%", "10%"};
+    private String[] tolerance = {"1 %", "2 %", "0.5 %", "0.25 %", "0.1 %", "0.05 %", "5 %", "10 %"};
     private String[] coeffTemp = {"100", "50", "15", "25" , "10", "5"};
 
     Spinner nbr_anneaux_spinner;
@@ -34,6 +34,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     String val1, val2, val3, val4, val5, val6;
 
     TextView result;
+    TextView toleranceText;
+    TextView toleranceTv;
+    TextView coefTempText;
+    TextView coefTempTv;
+    TextView coefTempUnit;
     Button evaluate;
 
     ArrayAdapter<CharSequence> colors_anneau2_adapter;
@@ -52,6 +57,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         int height = size.y;
 
         RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(width/3, LinearLayout.LayoutParams.WRAP_CONTENT);
+
+        toleranceTv = (TextView) findViewById(R.id.tolerance_value);
+        toleranceText = (TextView) findViewById(R.id.tolerance_text);
+
+        coefTempText = (TextView) findViewById(R.id.coefTempe_text);
+        coefTempTv = (TextView) findViewById(R.id.coefTempe_value);
+        coefTempUnit = (TextView) findViewById(R.id.coefTempe_unit);
 
         result = (TextView) findViewById(R.id.result);
         evaluate = (Button) findViewById(R.id.evaluate_button);
@@ -130,6 +142,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 color5_spinner.setVisibility(View.INVISIBLE);
                 color6_spinner.setVisibility(View.INVISIBLE);
                 result.setText("");
+                toleranceText.setVisibility(View.INVISIBLE);
+                toleranceTv.setVisibility(View.INVISIBLE);
+                coefTempText.setVisibility(View.INVISIBLE);
+                coefTempTv.setVisibility(View.INVISIBLE);
+                coefTempUnit.setVisibility(View.INVISIBLE);
                 break;
             case 4:
                 nbrNoeux = 4;
@@ -142,6 +159,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 color5_spinner.setVisibility(View.INVISIBLE);
                 color6_spinner.setVisibility(View.INVISIBLE);
                 result.setText("");
+                toleranceText.setVisibility(View.VISIBLE);
+                toleranceTv.setVisibility(View.VISIBLE);
+                toleranceTv.setText("");
+                coefTempText.setVisibility(View.INVISIBLE);
+                coefTempTv.setVisibility(View.INVISIBLE);
+                coefTempUnit.setVisibility(View.INVISIBLE);
                 break;
             case 5:
                 nbrNoeux = 5;
@@ -154,6 +177,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 color5_spinner.setVisibility(View.VISIBLE);
                 color6_spinner.setVisibility(View.INVISIBLE);
                 result.setText("");
+                toleranceText.setVisibility(View.VISIBLE);
+                toleranceTv.setVisibility(View.VISIBLE);
+                toleranceTv.setText("");
+                coefTempText.setVisibility(View.INVISIBLE);
+                coefTempTv.setVisibility(View.INVISIBLE);
+                coefTempUnit.setVisibility(View.INVISIBLE);
                 break;
             case 6:
                 nbrNoeux = 6;
@@ -166,6 +195,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 color5_spinner.setVisibility(View.VISIBLE);
                 color6_spinner.setVisibility(View.VISIBLE);
                 result.setText("");
+                toleranceText.setVisibility(View.VISIBLE);
+                toleranceTv.setVisibility(View.VISIBLE);
+                toleranceTv.setText("");
+                coefTempText.setVisibility(View.VISIBLE);
+                coefTempTv.setVisibility(View.VISIBLE);
+                coefTempUnit.setVisibility(View.VISIBLE);
+                coefTempTv.setText("");
                 break;
             default:
                 break;
@@ -193,6 +229,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 val4 = tolerance[color4_spinner.getSelectedItemPosition()];
                 double v4 = Double.parseDouble(val1 + val2)*Double.parseDouble(val3);
                 result.setText(String.valueOf(v4));
+                String tol4 = "\u00B1 " + val4;
+                toleranceTv.setText(tol4);
                 break;
             case 5:
                 val1 = anneau1[color1_spinner.getSelectedItemPosition()];
@@ -202,6 +240,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 val5 = tolerance[color5_spinner.getSelectedItemPosition()];
                 double v5 = Double.parseDouble(val1 + val2 + val3)*Double.parseDouble(val4);
                 result.setText(String.valueOf(v5));
+                String tol5 = "\u00B1 " + val5;
+                toleranceTv.setText(tol5);
                 break;
             case 6:
                 val1 = anneau1[color1_spinner.getSelectedItemPosition()];
@@ -212,6 +252,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 val6 = coeffTemp[color6_spinner.getSelectedItemPosition()];
                 double v6 = Double.parseDouble(val1 + val2 + val3)*Double.parseDouble(val4);
                 result.setText(String.valueOf(v6));
+                String tol6 = "\u00B1 " + val5;
+                toleranceTv.setText(tol6);
+                coefTempTv.setText(val6);
                 break;
             default:
                 break;

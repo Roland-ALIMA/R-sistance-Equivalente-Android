@@ -115,5 +115,52 @@
         android:layout_toEndOf="@id/result"
         android:layout_alignParentEnd="true"
         android:paddingStart="10dp"/>
+    
+    <TextView
+        android:id="@+id/tolerance_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/tolerance_text"
+        android:layout_below="@id/result_text"/>
+
+    <TextView
+        android:id="@+id/tolerance_value"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:gravity="end"
+        android:layout_below="@id/result_text"
+        android:layout_toEndOf="@id/tolerance_text"/>
+
+    <TextView
+        android:id="@+id/coefTempe_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/coef_de_temp"
+        android:layout_below="@id/tolerance_value"/>
+
+    <TextView
+        android:id="@+id/coefTempe_value"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:gravity="end"
+        android:layout_below="@id/tolerance_value"
+        android:layout_toEndOf="@id/coefTempe_text"/>
+
+    <TextView
+        android:id="@+id/coefTempe_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/coef_temp_unit"
+        android:gravity="end"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@id/tolerance_value"
+        android:layout_toEndOf="@id/coefTempe_value"
+        android:layout_alignParentEnd="true"
+        android:paddingStart="10dp"/>
 
 </RelativeLayout>

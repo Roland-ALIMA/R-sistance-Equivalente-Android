@@ -5,4 +5,7 @@
     <string name="evaluate">EVALUATE</string>
     <string name="result_text">Result :</string>
     <string name="Ohms">Ohms</string>
+    <string name="tolerance_text">Tolérance :</string>
+    <string name="coef_de_temp">Coef. de Temp.</string>
+    <string name="coef_temp_unit">ppm</string>
 </resources>
