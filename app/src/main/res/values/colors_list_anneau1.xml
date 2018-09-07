@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="colors_anneau1_list_array">
+        <!--
+        <item>@color/Marron</item>
+        <item>@color/Rouge</item>
+        <item>@color/Orange</item>
+        <item>@color/Jaune</item>
+        <item>@color/Vert</item>
+        <item>@color/Bleu</item>
+        <item>@color/Violet</item>
+        <item>@color/Gris</item>
+        <item>@color/Blanc</item>
+        -->
+        <item>Marron</item>
+        <item>Rouge</item>
+        <item>Orange</item>
+        <item>Jaune</item>
+        <item>Vert</item>
+        <item>Bleu</item>
+        <item>Violet</item>
+        <item>Gris</item>
+        <item>Blanc</item>
+    </array>
+</resources>

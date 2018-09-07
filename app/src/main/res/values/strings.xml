@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Resistance Equivalente</string>
     <string name="nombre_anneaux">Définir Nombre d\'anneaux :</string>
+    <string name="choisir_couleurs_anneaux">Sélectionner les couleurs de chaque anneaux :</string>
+    <string name="evaluate">EVALUATE</string>
+    <string name="result_text">Result :</string>
+    <string name="Ohms">Ohms</string>
 </resources>

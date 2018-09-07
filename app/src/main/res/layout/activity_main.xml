@@ -17,23 +17,32 @@
 
     <Spinner
         android:id="@+id/nbr_anneaux_spinner"
-        android:layout_width="fill_parent"
+        android:layout_width="140dp"
         android:layout_height="50dp"
         android:layout_toEndOf="@id/nbr_anneaux_text"
         />
+
+    <TextView
+        android:id="@+id/colors_choice_text"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/choisir_couleurs_anneaux"
+        android:layout_below="@id/nbr_anneaux_text"
+        android:textStyle="bold"/>
 
     <Spinner
         android:id="@+id/color1_spinner"
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:layout_below="@id/nbr_anneaux_text"
+        android:layout_below="@id/colors_choice_text"
         />
 
     <Spinner
         android:id="@+id/color2_spinner"
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:layout_below="@id/nbr_anneaux_text"
+        android:layout_below="@id/colors_choice_text"
         android:layout_toEndOf="@id/color1_spinner"
         />
 
@@ -41,7 +50,7 @@
         android:id="@+id/color3_spinner"
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:layout_below="@id/nbr_anneaux_text"
+        android:layout_below="@id/colors_choice_text"
         android:layout_toEndOf="@id/color2_spinner"
         />
 
@@ -67,5 +76,44 @@
         android:layout_below="@id/color2_spinner"
         android:layout_toEndOf="@id/color5_spinner"
         />
+
+    <Button
+        android:id="@+id/evaluate_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/color4_spinner"
+        android:layout_centerHorizontal="true"
+        android:text="@string/evaluate"
+        />
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/result_text"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@id/evaluate_button"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:gravity="end"
+        android:layout_below="@id/evaluate_button"
+        android:layout_toEndOf="@id/result_text"/>
+
+    <TextView
+        android:id="@+id/result_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/Ohms"
+        android:gravity="end"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@id/evaluate_button"
+        android:layout_toEndOf="@id/result"
+        android:layout_alignParentEnd="true"
+        android:paddingStart="10dp"/>
 
 </RelativeLayout>
