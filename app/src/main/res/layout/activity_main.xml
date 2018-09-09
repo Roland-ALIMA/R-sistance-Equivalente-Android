@@ -9,16 +9,17 @@
     <TextView
         android:id="@+id/nbr_anneaux_text"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="100dp"
         android:text="@string/nombre_anneaux"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/Noir"
         android:gravity="center"
         android:textStyle="bold"/>
 
     <Spinner
         android:id="@+id/nbr_anneaux_spinner"
         android:layout_width="140dp"
-        android:layout_height="50dp"
+        android:layout_height="100dp"
+        android:paddingLeft="10dp"
         android:layout_toEndOf="@id/nbr_anneaux_text"
         />
 
@@ -26,33 +27,70 @@
         android:id="@+id/colors_choice_text"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/Noir"
         android:text="@string/choisir_couleurs_anneaux"
         android:layout_below="@id/nbr_anneaux_text"
         android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/band1_text"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Noir"
+        android:gravity="center"
+        android:layout_below="@id/colors_choice_text"
+        android:text="@string/band1"/>
 
     <Spinner
         android:id="@+id/color1_spinner"
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:layout_below="@id/colors_choice_text"
+        android:layout_below="@id/band1_text"
         />
+
+    <TextView
+        android:id="@+id/band2_text"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Noir"
+        android:gravity="center"
+        android:layout_below="@id/colors_choice_text"
+        android:text="@string/band2"/>
 
     <Spinner
         android:id="@+id/color2_spinner"
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:layout_below="@id/colors_choice_text"
+        android:layout_below="@id/band1_text"
         android:layout_toEndOf="@id/color1_spinner"
         />
+
+    <TextView
+        android:id="@+id/band3_text"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Noir"
+        android:gravity="center"
+        android:layout_below="@id/colors_choice_text"
+        android:text="@string/band3"/>
 
     <Spinner
         android:id="@+id/color3_spinner"
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:layout_below="@id/colors_choice_text"
+        android:layout_below="@id/band1_text"
         android:layout_toEndOf="@id/color2_spinner"
         />
+
+    <TextView
+        android:id="@+id/band4_text"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:textColor="@color/Noir"
+        android:gravity="center"
+        android:layout_below="@id/color1_spinner"
+        android:text="@string/band4"/>
 
     <Spinner
         android:id="@+id/color4_spinner"
@@ -61,6 +99,16 @@
         android:layout_below="@id/color1_spinner"
         />
 
+    <TextView
+        android:id="@+id/band5_text"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:textColor="@color/Noir"
+        android:gravity="center"
+        android:layout_below="@id/color1_spinner"
+        android:text="@string/band5"/>
+
     <Spinner
         android:id="@+id/color5_spinner"
         android:layout_width="140dp"
@@ -68,6 +116,16 @@
         android:layout_below="@id/color2_spinner"
         android:layout_toEndOf="@id/color4_spinner"
         />
+
+    <TextView
+        android:id="@+id/band6_text"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:textColor="@color/Noir"
+        android:gravity="center"
+        android:layout_below="@id/color1_spinner"
+        android:text="@string/band6"/>
 
     <Spinner
         android:id="@+id/color6_spinner"
@@ -84,6 +142,7 @@
         android:layout_below="@id/color4_spinner"
         android:layout_centerHorizontal="true"
         android:text="@string/evaluate"
+        android:paddingTop="15dp"
         />
 
     <TextView
@@ -91,46 +150,46 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:text="@string/result_text"
+        android:paddingTop="15dp"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/Noir"
         android:layout_below="@id/evaluate_button"/>
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:gravity="end"
-        android:layout_below="@id/evaluate_button"
-        android:layout_toEndOf="@id/result_text"/>
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/Noir"
+        android:layout_below="@id/result_text"
+        />
 
     <TextView
         android:id="@+id/result_unit"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:text="@string/Ohms"
-        android:gravity="end"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_below="@id/evaluate_button"
+        android:textColor="@color/Noir"
+        android:layout_below="@id/result_text"
         android:layout_toEndOf="@id/result"
-        android:layout_alignParentEnd="true"
-        android:paddingStart="10dp"/>
+        android:paddingLeft="10dp"/>
     
     <TextView
         android:id="@+id/tolerance_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/Noir"
         android:text="@string/tolerance_text"
-        android:layout_below="@id/result_text"/>
+        android:layout_below="@id/result"/>
 
     <TextView
         android:id="@+id/tolerance_value"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:gravity="end"
-        android:layout_below="@id/result_text"
+        android:textColor="@color/Noir"
+        android:paddingLeft="120dp"
+        android:layout_below="@id/result"
         android:layout_toEndOf="@id/tolerance_text"/>
 
     <TextView
@@ -138,15 +197,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/Noir"
         android:text="@string/coef_de_temp"
         android:layout_below="@id/tolerance_value"/>
 
     <TextView
         android:id="@+id/coefTempe_value"
-        android:layout_width="270dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:gravity="end"
+        android:paddingLeft="80dp"
+        android:textColor="@color/Noir"
         android:layout_below="@id/tolerance_value"
         android:layout_toEndOf="@id/coefTempe_text"/>
 
@@ -155,12 +215,9 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:text="@string/coef_temp_unit"
-        android:gravity="end"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/Noir"
         android:layout_below="@id/tolerance_value"
         android:layout_toEndOf="@id/coefTempe_value"
-        android:layout_alignParentEnd="true"
         android:paddingStart="10dp"/>
 
 </RelativeLayout>

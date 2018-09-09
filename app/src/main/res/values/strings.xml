@@ -1,11 +1,17 @@
 <resources>
     <string name="app_name">Resistance Equivalente</string>
-    <string name="nombre_anneaux">Définir Nombre d\'anneaux :</string>
-    <string name="choisir_couleurs_anneaux">Sélectionner les couleurs de chaque anneaux :</string>
+    <string name="nombre_anneaux">Select Number of bands :</string>
+    <string name="choisir_couleurs_anneaux">Select color of each band :</string>
     <string name="evaluate">EVALUATE</string>
-    <string name="result_text">Result :</string>
-    <string name="Ohms">Ohms</string>
-    <string name="tolerance_text">Tolérance :</string>
-    <string name="coef_de_temp">Coef. de Temp.</string>
+    <string name="result_text">The value of your resistance is :</string>
+    <string name="Ohms">\u2126</string>
+    <string name="tolerance_text">Tolerance :</string>
+    <string name="coef_de_temp">Coef. of Temp. :</string>
     <string name="coef_temp_unit">ppm</string>
+    <string name="band1">Band 1</string>
+    <string name="band2">Band 2</string>
+    <string name="band3">Band 3</string>
+    <string name="band4">Band 4</string>
+    <string name="band5">Band 5</string>
+    <string name="band6">Band 6</string>
 </resources>
